@@ -43,4 +43,3 @@ async function clockIn() {
             alert("Clock In Failed");
         }
 
-   
