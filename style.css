@@ -49,3 +49,9 @@ button {
 button:hover {
     background: #1b5e20;
 }
+
+.logo {
+    width: 180px;
+    height: auto;
+    margin-bottom: 20px;
+}
