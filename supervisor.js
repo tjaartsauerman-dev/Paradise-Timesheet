@@ -18,7 +18,7 @@ function clockOut() {
 }
 
 function goApproval() {
-    alert("Supervisor Approval - Coming Soon");
+    window.location.href = "approval.html";
 }
 
 function goPayroll() {
