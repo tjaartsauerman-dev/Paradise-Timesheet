@@ -20,12 +20,12 @@ async function login() {
 
         const users = await response.json();
 
-        console.log(users);
+console.log(users);
 
-        if (users.length === 0) {
-            alert("Invalid Email or PIN");
-            return;
-        }
+if (users.length === 0) {
+    alert("No user returned from database");
+    return;
+}
 
         const user = users[0];
 
