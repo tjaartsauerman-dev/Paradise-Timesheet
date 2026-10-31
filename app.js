@@ -1,1 +1,1 @@
-console.log("App loaded");
+alert("Paradise & Wilderness Portal Loaded");
