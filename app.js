@@ -6,14 +6,17 @@ async function login() {
     const email = document.getElementById("email").value.trim();
     const pin = document.getElementById("pin").value.trim();
 
-    console.log("Email:", email);
-    console.log("PIN:", pin);
+    if (!email || !pin) {
+        alert("Please enter Email and PIN");
+        return;
+    }
 
     try {
 
         const response = await fetch(
             `${SUPABASE_URL}/rest/v1/users?select=*&email=eq.${encodeURIComponent(email)}&pin=eq.${encodeURIComponent(pin)}`,
             {
+                method: "GET",
                 headers: {
                     "apikey": SUPABASE_KEY,
                     "Authorization": `Bearer ${SUPABASE_KEY}`,
@@ -31,36 +34,4 @@ async function login() {
             return;
         }
 
-        const user = users[0];
-
-        localStorage.setItem(
-            "currentUser",
-            JSON.stringify(user)
-        );
-
-        if (user.role.toLowerCase() === "supervisor") {
-
-            alert(
-                "Welcome Supervisor: " +
-                user.name
-            );
-
-        } else {
-
-            alert(
-                "Welcome Employee: " +
-                user.name
-            );
-
-        }
-
-    } catch (error) {
-
-        console.error("Login Error:", error);
-
-        alert(
-            "Login Error. Check browser console."
-        );
-
-    }
-}
+        
