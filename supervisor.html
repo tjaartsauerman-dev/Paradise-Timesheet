@@ -1,34 +1,45 @@
-const user = JSON.parse(
-    localStorage.getItem("currentUser")
-);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supervisor Dashboard</title>
 
-if (!user) {
-    window.location.href = "index.html";
-}
+    <link rel="stylesheet" href="style.css">
+</head>
 
-document.getElementById("welcome").innerText =
-    "Welcome " + user.name;
+<body>
 
-function clockIn() {
-    alert("Clock In - Coming Soon");
-}
+    <div class="container">
 
-function clockOut() {
-    alert("Clock Out - Coming Soon");
-}
+        <img src="logo.png" alt="Paradise & Wilderness Logo" class="logo">
 
-function goApproval() {
-    window.location.href = "approval.html";
-}
+        <h1>Paradise & Wilderness</h1>
 
-function goPayroll() {
-    alert("Payroll - Coming Soon");
-}
+        <h2>Supervisor Dashboard</h2>
 
-function logout() {
+        <h3 id="welcome"></h3>
 
-    localStorage.removeItem("currentUser");
+        <div class="button-row">
+            <button onclick="clockIn()">Clock In</button>
+            <button onclick="clockOut()">Clock Out</button>
+        </div>
 
-    window.location.href = "index.html";
+        <button onclick="goApproval()">
+            Supervisor Approval
+        </button>
 
-}
+        <button onclick="goPayroll()">
+            Payroll
+        </button>
+
+        <button class="logout-btn" onclick="logout()">
+            Logout
+        </button>
+
+    </div>
+
+    <script src="supervisor.js"></script>
+
+</body>
+</html>
