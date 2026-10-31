@@ -1,25 +1,23 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    text-align: center;
+    background-color: #f3f3f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
+}
+
+.container {
+    width: 400px;
+    background: white;
     padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    text-align: center;
 }
 
 h1 {
     color: #2e7d32;
-}
-
-input {
-    padding: 10px;
-    width: 250px;
-    margin: 10px;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #2e7d32;
-    color: white;
-    border: none;
-    cursor: pointer;
+    margin-bottom: 5px;
 }
