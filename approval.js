@@ -7,13 +7,9 @@ if (!user) {
 }
 
 if (user.role.toLowerCase() !== "supervisor") {
-    alert("Access denied");
+    alert("Access Denied");
     window.location.href = "index.html";
 }
-
-document.getElementById("approvalList").innerHTML = `
-    <p>No pending approvals yet.</p>
-`;
 
 function goBack() {
     window.location.href = "supervisor.html";
