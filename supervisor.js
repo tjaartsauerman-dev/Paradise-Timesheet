@@ -10,19 +10,19 @@ document.getElementById("welcome").innerText =
     "Welcome " + user.name;
 
 function clockIn() {
-    alert("Clock In Coming Soon");
+    alert("Clock In - Coming Soon");
 }
 
 function clockOut() {
-    alert("Clock Out Coming Soon");
+    alert("Clock Out - Coming Soon");
 }
 
 function goApproval() {
-    alert("Supervisor Approval Coming Soon");
+    alert("Supervisor Approval - Coming Soon");
 }
 
 function goPayroll() {
-    alert("Payroll Coming Soon");
+    alert("Payroll - Coming Soon");
 }
 
 function logout() {
