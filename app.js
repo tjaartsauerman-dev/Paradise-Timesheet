@@ -34,4 +34,28 @@ async function login() {
             return;
         }
 
-        
+        const user = users[0];
+
+        localStorage.setItem(
+            "currentUser",
+            JSON.stringify(user)
+        );
+
+        if (user.role.toLowerCase() === "supervisor") {
+
+            window.location.href = "supervisor.html";
+
+        } else {
+
+            alert("Employee dashboard not built yet");
+
+        }
+
+    } catch (error) {
+
+        console.error("Login Error:", error);
+
+        alert("Login Error. Please try again.");
+
+    }
+}
